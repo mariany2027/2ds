@@ -1,0 +1,21 @@
+# lista de roupas disponiveis
+roupas_disponiveis = {
+"camisa": True,
+"calça": False,
+"meia": True,
+"sapato": True
+}
+ # funçao para verificar se a roupa esta disponivel
+ def verificar_disponibilidade{roupas}
+ if roupa not in roupas_disponiveis:
+  return "Roupa não disponível." por favor escolha outra"
+# checa se a roupa esta disponvel
+disponibilidade = roupas_disponiveis 
+ if desponibilidades:
+  print f"A {roupa} esta disponivel para compra."
+ else:
+   return f"A {roupa} nao esta disponivel para compra."
+# entrada de usuario 
+item = input{"Digite o nome da roupa que deseja comprar:"}
+# chama a funçao para verificar a disponibilidade da roupa
+ 
