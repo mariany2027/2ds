@@ -1,0 +1,9 @@
+numeros = [2,4,10]
+
+# encontrar o maior e o menor numero
+maior_numero = max ( numeros)
+menor_numero = min ( numeros)
+
+# exibir o resultado
+print (f"o maior numero e : { maior_numero}")
+print (f'o menor numero e { menor_numero}')
