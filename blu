@@ -1,0 +1,23 @@
+# funçao para calcular o preço do ingresso
+
+def calcular_preco(tipo_ingresso):
+    if tipo_ingresso =="inteiro":
+        return 20.00
+    elif tipo_ingresso == "meia":
+        return 10.00
+    else:
+       return ("tipo de ingresso invalido")
+# funçao para mostrar os detalhes do ingresso
+def comprar_ingresso():
+    filme = input ("escolha o filme")
+    horario = input (" escolha o horario")
+    tipo_ingresso = input (" escolha o tipo de ingresso")
+
+    preco = calcular_preco(tipo_ingresso)
+
+    if instante(preco, float):
+        print(f"/n--- detalhes do ingresso :{filme}")
+    else:
+        print (preco)
+# executar a compr
+comprar_ingresso()
