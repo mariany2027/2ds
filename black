@@ -1,0 +1,8 @@
+ # lista de palavras para o jogo
+palavras = ["cachorro", "gato", "elefante", "galinha "..]
+# funçao para escolher uma palavra aleatoria da lista
+def escolher_palavra():
+ return random.choice(palavras)
+# funçao para iniciar o jogo
+def iniciar_jogo():
+  
