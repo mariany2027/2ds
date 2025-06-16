@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CurlsModa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fefefe;
+      color: #333;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ffb6c1;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .banner {
+      background: url('https://source.unsplash.com/1600x500/?fashion,style') center/cover no-repeat;
+      height: 300px;
+    }
+
+    .destaques {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .destaques h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .ver-mais {
+      text-align: center;
+      margin: 20px;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CurlsModa</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Tendências</a>
+      <a href="#">Lookbook</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <div class="banner"></div>
+
+  <section class="destaques">
+    <h2>Tendências da Estação</h2>
+    <p>Explore os looks mais estilosos para cada estação com CurlsModa.</p>
+  </section>
+
+  <section class="galeria" id="galeria">
+    <img src="https://source.unsplash.com/400x500/?fashion,casual" alt="Look 1">
+    <img src="https://source.unsplash.com/400x500/?fashion,chic" alt="Look 2">
+    <img src="https://source.unsplash.com/400x500/?fashion,elegant" alt="Look 3">
+    <img src="https://source.unsplash.com/400x500/?fashion,streetwear" alt="Look 4">
+  </section>
+
+  <div class="ver-mais">
+    <button onclick="mostrarMais()">Ver Mais</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 CurlsModa | Siga-nos no Instagram @curlsmoda</p>
+  </footer>
+
+  <script>
+    function mostrarMais() {
+      const galeria = document.getElementById('galeria');
+      const novasImagens = [
+        "https://source.unsplash.com/400x500/?fashion,retro",
+        "https://source.unsplash.com/400x500/?fashion,modern",
+        "https://source.unsplash.com/400x500/?fashion,minimalist",
+        "https://source.unsplash.com/400x500/?fashion,colorful"
+      ];
+
+      novasImagens.forEach(url => {
+        const img = document.createElement("img");
+        img.src = url;
+        img.alt = "Look extra";
+        galeria.appendChild(img);
+      });
+
+      // Esconde o botão após o clique
+      document.querySelector('.ver-mais').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
